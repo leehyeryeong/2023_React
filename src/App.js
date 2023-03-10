@@ -1,6 +1,6 @@
 function App() {
-  const name = '리액트2';
-  return <div>{name === '리액트' ? <h1>리액트입니다.</h1> : null}</div>
+  const number = 0;
+  return number && <div>내용</div>
 }
 
 export default App;
