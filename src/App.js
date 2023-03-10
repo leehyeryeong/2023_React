@@ -1,6 +1,8 @@
+import './App.css';
+
 function App() {
-  const number = 0;
-  return number && <div>내용</div>
+  const name = undefined;
+  return name || '값이 undefined입니다.';
 }
 
 export default App;
