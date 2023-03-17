@@ -1,32 +1,44 @@
-import { Component } from 'react'
+import { Component } from 'react';
 
 class Counter extends Component {
-  constructor(props) {
-    super(props);
-    //state의 초깃값을 설정
-    this.state = {
-      number: 0,
-      fixedNumber: 0
+    state = { 
+      number : 0,
+      fixedNumber : 0
     };
-  }
+
+  //생성자 작성없이 state문을 작성하면 초깃값을 설정할 수 있도록
+  //내부적으로 생성자가 실행되고 있음
   render() {
-    const { number, fixedNumber } = this.state; //state를 조회할 때 this.state로 한다.
+    //this.state는 생성자에서 설정한 값을 조회해서
+    //number, fixedNumber 값을 저장
+    const {number, fixedNumber} = this.state;
+    //this.state는 생성자에서 설정한 값을 가져와서
+    //const {number}에서 number에 저장
     return (
       <div>
-        <h1>{number}</h1>
-        <h2>바뀌지 않는 값: {fixedNumber}</h2>
+        <h1> { number } </h1>
+        <h2> 바뀌지 않는 값: {fixedNumber} </h2>
         <button
-          //onClick을 통해 버튼이 클릭되었을 때 호출할 함수를 지정
-          onClick={() => {
-            //this.state를 사용하여 state에 새로운 값을 넣을 수 있다.
-            this.setState({ number: number + 1 });
-          }}
-          > 
-            +1
+        //onClick을 통해 버튼이 클릭되었을 때 호출할 함수를 지정
+          onClick = { () => {
+            this.setState((prevState) => {
+              return {
+                number: prevState.number + 1
+              }
+            });
+            this.setState((prevState) => {
+              return {
+                number: prevState.number + 1
+              }
+            });
+          }
+        }
+        >
+          +2
         </button>
       </div>
-    ); 
-  } 
+    );
+  }
 }
 
 export default Counter;
