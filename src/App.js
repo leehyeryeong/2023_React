@@ -1,7 +1,7 @@
-import Counter from "./Counter";
+import Say from "./say";
 
 const App = () => {
-  return <Counter/>;
+  return <Say/>;
 };
 
 export default App;
