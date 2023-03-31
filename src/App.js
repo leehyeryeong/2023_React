@@ -4,9 +4,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ScrollBox />
+        <ScrollBox ref={(ref) => (this.ScrollBox = ref)}/>
+        <button onClick={() => this.ScrollBox.scrollBottom()}>
+          맨 밑으로
+        </button>
       </div>
-    );
+    )
   }
 }
 
