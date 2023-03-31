@@ -1,7 +1,9 @@
-import EventPractice from "./EventPractice";
-
-const App = () => {
-  return <EventPractice/>;
-};
+import { Component } from "react";
+import RefSample from "./RefSample";
+class App extends Component {
+  render() {
+    return <RefSample/>;
+  }
+}
 
 export default App;
