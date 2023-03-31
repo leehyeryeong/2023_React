@@ -1,8 +1,12 @@
 import { Component } from "react";
-import RefSample from "./RefSample";
+import ScrollBox from "./ScrollBox";
 class App extends Component {
   render() {
-    return <RefSample/>;
+    return (
+      <div>
+        <ScrollBox />
+      </div>
+    );
   }
 }
 
