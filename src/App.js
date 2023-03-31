@@ -1,8 +1,8 @@
 import { Component } from "react";
-import RefSample from "./RefSample";
+import ValidationSample from "./ValidationSample";
 class App extends Component {
   render() {
-    return <RefSample/>;
+    return <ValidationSample/>;
   }
 }
 
